@@ -60,7 +60,12 @@ function Loader() {
     return () => tl.kill();
   }, []);
   if (!show) return null;
-  return <div className="loader-screen"><div className="loader-inner"><img className="loader-mark" src={`${A}timeframe-mark.png`} /><div className="loader-word">TIME<span>FRAME</span></div><div className="loader-tag">MAKE TIME INTENTIONAL</div><div className="loader-line"><span /></div></div></div>;
+  return <div className="loader-screen">
+    <div className="loader-inner">
+      <img className="loader-mark" src={`${A}timeframe-mark.png`} />
+    <div className="loader-word">TIME<span>FRAME</span></div>
+      <div className="loader-tag">MAKE TIME INTENTIONAL</div>
+      <div className="loader-line"><span /></div></div></div>;
 }
 
 function Header({ onPlay }) {
@@ -69,7 +74,8 @@ function Header({ onPlay }) {
   return <header className="site-header">
     <a href="#top" className="brand" aria-label="TimeFrame home">
       <img src={`${A}timeframe-mark.png`} alt="" />
-      <span>TIME<span>FRAME</span><small>MAKE TIME INTENTIONAL</small></span>
+      <span>TIME<span>FRAME</span>
+      <small>MAKE TIME INTENTIONAL</small></span>
     </a>
     <nav className="desktop-nav">{links.map(([label, href]) => <a key={label} href={href}>{label}</a>)}</nav>
     <div className="header-actions"><button className="watch-link" onClick={onPlay}><Play size={13} fill="currentColor" /> Watch overview</button><a className="button button-hot header-cta" href="#download">Get TimeFrame <ArrowUpRight size={16} /></a></div>
