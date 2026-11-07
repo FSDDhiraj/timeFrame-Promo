@@ -58,7 +58,7 @@ body:before {
 }
 .loader-word {
     font:700 24px var(--display);
-    letter-spacing:-1.5px
+    letter-spacing:1.5px
 }
 .loader-word span,.brand>span>span,.footer-brand>span>span {
     color:var(--cyan)
